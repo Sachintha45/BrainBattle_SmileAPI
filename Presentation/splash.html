@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Brain Battle</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<style>
+		body {
+            background-image: url('../Presentation/images/bg.jpg');
+			background-size: cover;
+		}
+		#splash-text {
+			font-size: 170px;
+			font-weight:lighter;
+			color: #FFFF00;
+			position: absolute;
+			top: 40%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			opacity: 0;
+			animation: fade-in 4s ease 0s 1 normal forwards;
+            font-family: 'DEBUG FREE TRIAL', cursive;
+		}
+		@keyframes fade-in {
+			0% {
+				opacity: 0;
+			}
+			100% {
+				opacity: 1;
+			}
+		}
+		.loading-bar {
+			background-color: #FFFF00;
+			height: 20px;
+			width: 150px;
+			margin-top: 10px;
+			position: absolute;
+			top: calc(40% + 100px);
+			left: 50%;
+			transform: translate(-50%, 0%);
+			animation: fill 8s ease 0s 1 normal forwards;
+            border-radius: 20px;
+
+		}
+		@keyframes fill {
+			0% {
+				width: 0px;
+			}
+			100% {
+				width: 150px;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div id="splash-text">BRAIN BATTLE</div>
+	<div class="loading-bar"></div>
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+	<script>
+		$(document).ready(function(){
+			setTimeout(function(){
+				window.location.href = "login.php";
+			}, 8000);
+		});
+	</script>
+</body>
+</html>

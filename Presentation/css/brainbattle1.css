@@ -1,0 +1,307 @@
+:root {
+    --board-bg: url('../images/bg.jpg');
+}
+
+h1 {
+    font-family: "DEBUG FREE TRIAL", sans-serif;
+    color: #E6EC36;
+    font-size: 6em;
+    margin-top: -60px;
+    margin-bottom: 2%;
+
+}
+
+h2 {
+    font-family: "Agency FB", sans-serif;
+    color: #ffb73b;
+}
+
+.quiz-section {
+    display: block;
+    padding: 80px;
+    min-height: 100vh;
+    max-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url('../images/bg.jpg')
+}
+
+
+
+.board-outer {
+    position: relative;
+}
+
+.mk-container {
+    object-fit: cover;
+    margin-top: -15%;
+}
+
+.score-area .p-3 {
+    margin-top: 6%;
+    min-height: 90%;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    
+}
+
+
+
+.score-table {
+    position: relative;
+}
+
+table {
+    width: 100%;
+    font-size: 1.5rem;
+}
+
+table td:nth-child(1) {
+    width: 200px;
+}
+
+
+
+
+
+.ans-btn button {
+    background-color: #E6EC36;
+    color: #87252E;
+    cursor: pointer;
+    position: relative;
+
+
+
+}
+
+.ans-btn {
+    display: flex;
+    position: relative;
+    padding-left: 50px !important;
+
+}
+
+.ans-btn button:hover {
+    background-color: #87252E;
+    color: #E6EC36;
+}
+
+.quiz-image img {
+
+    width: 100%;
+}
+
+.quiz-image {
+    object-fit: cover;
+    margin-bottom: 10%;
+}
+
+
+#menu-btn {
+    position: fixed;
+    bottom: 1.5em;
+    right: 1em;
+    background: none;
+    font-family: "DEBUG FREE TRIAL", sans-serif;
+    color: #FFD700;
+    font-size: 2.5em;
+    border: none;
+}
+
+#exit-btn {
+    position: fixed;
+    bottom: 0.5em;
+    right: 1.3em;
+    background: none;
+    font-family: "DEBUG FREE TRIAL", sans-serif;
+    color: #FFD700;
+    font-size: 2.5em;
+    border: none;
+}
+
+#menu-btn:hover {
+    color: #FF4136;
+}
+
+#exit-btn:hover {
+    color: #FF4136;
+}
+
+#music-switch-container {
+
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+
+}
+
+#music-switch-container label {
+    font-family: "DEBUG FREE TRIAL", sans-serif;
+    color: #FFD700;
+    font-size: 2em;
+    margin-right: 10px;
+}
+
+#music-switch {
+    appearance: none;
+    width: 50px;
+    height: 25px;
+    border-radius: 15px;
+    background-color: #d45a5f;
+    position: relative;
+    cursor: pointer;
+}
+
+#music-switch:checked {
+    background-color: #5fd45a;
+}
+
+#music-switch::before {
+    content: '';
+    position: absolute;
+    top: 2.5px;
+    left: 2.5px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #fff;
+    transition: all 0.2s ease-in-out;
+}
+
+#music-switch:checked::before {
+    transform: translateX(25px);
+}
+
+#username {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px;
+    background-color: rgba(255, 65, 54, 0.5);
+    /* the fourth value (0.5) represents the opacity */
+}
+
+#game-info {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+    grid-gap: 10px;
+    align-items: center;
+    justify-items: start;
+    position: absolute;
+    top: 50%;
+    left: 70px;
+    width: 300px;
+    transform: translateY(-50%);
+    grid-row-gap: 20px;
+
+}
+
+#timer,
+#score-container,
+#lives-container {
+    padding: 10px;
+    font-size: 25px;
+    line-height: 1.5;
+    text-align: center;
+    font-family: 'Anton';
+    background-color: rgba(135, 37, 46, 0.8);
+    color: #E6EC36;
+    width: 300px;
+
+}
+
+#timer {
+    grid-row: 1 / span 1;
+    grid-column: 1 / span 1;
+
+}
+
+#score-container {
+    grid-row: 2 / span 1;
+    grid-column: 1 / span 1;
+}
+
+#lives-container {
+    grid-row: 3 / span 1;
+    grid-column: 1 / span 1;
+}
+
+#level-container {
+    padding: 10px;
+    font-size: 25px;
+    line-height: 1.5;
+    text-align: center;
+    font-family: 'Anton';
+    background-color: rgba(135, 37, 46, 0.8);
+    color: #E6EC36;    width: 300px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(1, auto);
+    grid-gap: 10px;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    right: 50px;
+    /* change this value to adjust the horizontal position */
+    width: 300px;
+    transform: translateY(-50%);
+    grid-row-gap: 20px;
+}
+
+.score-table {
+    font-family: "Agency FB", sans-serif;
+    color: #fff;
+    font-style: whiite;
+}
+
+/* ====================================================================================================== */
+/* Game Over */
+
+.topic {
+    font-size: 6em;
+    margin-top: -100px;
+    padding-top: 30px;
+
+}
+
+.lost {
+    font-size: 5em;
+    padding-top: 90px;
+    vertical-align: middle;
+    align-content: center;
+}
+
+.play-btn {
+    display: inline-block;
+    margin-top: 1em;
+    padding: 0.5em 1em;
+    background-color: yellow;
+    color: black;
+    font-size: 2em;
+    font-family: 'Agency FB', sans-serif;
+    text-decoration: none;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.play-btn:hover {
+    background-color: #f5dd00;
+}
+
+#usernamecurrent {
+    position: fixed;
+      top: 20px;
+      right: 20px;
+      padding: 10px;
+      background-color: rgba(255, 65, 54, 0.5); /* the fourth value (0.5) represents the opacity */
+      color: #fff;
+  }
+
+.howtoplayheader {
+    font-size: 3em;
+}

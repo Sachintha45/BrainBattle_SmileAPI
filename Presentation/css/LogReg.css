@@ -1,0 +1,291 @@
+* {
+  color: yellow;
+}
+
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+}
+
+
+.form-control {
+  border-radius: 20px;
+  opacity: 0.75;
+  margin-left: 50px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  align-content: center;
+  width: 300px;
+  
+}
+
+
+
+.btn-danger {
+  background-color: #FF4136;
+  color: #FFD700;
+  border: none;
+  padding: 6px 15px;
+  border-radius: 20px;
+  font-size: 20px;
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+  width: 140px;
+  margin-top: 20px;
+  font-family: 'Anton';
+
+}
+
+.btn-transparent{
+  background-color: none;
+  color: #FFD700;
+  border: none;
+  padding: 6px 15px;
+  font-size: 20px;
+  transition: opacity 0.3s ease-in-out;
+  margin-top: 20px;
+  font-family: 'Anton';
+
+}
+
+.btn-danger:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.btn-danger-sm {
+  font-size: 14px;
+  padding: 5px 10px;
+}
+
+
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #333;
+  color: #fff;
+}
+
+#menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* height: calc(100vh - 60px); subtract the height of the header */
+}
+
+#menu-buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#menu-buttons button:hover {
+  background-color: #200808;
+  color: #fff;
+}
+
+
+#menu-buttons button {
+  margin: 10px;
+}
+
+
+
+#exit-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: none;
+  font-family: "DEBUG FREE TRIAL", sans-serif;
+  color: #FFD700;
+  font-size: 2em;
+  border: none;
+}
+
+#exit-btn:hover {
+  color: #FF4136;
+}
+
+#usernamecurrent {
+  position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px;
+    background-color: rgba(255, 65, 54, 0.5); /* the fourth value (0.5) represents the opacity */
+    color: #fff;
+}
+
+/* ============================================================================================================================ */
+/* login */
+
+
+.display-4 {
+  font-family: "DEBUG FREE TRIAL", sans-serif;
+  font-size: 8em;
+}
+
+h1 {
+  font-family: "DEBUG FREE TRIAL", sans-serif;
+  color: #E6EC36;
+  text-align: center;
+  font-weight: lighter;
+}
+
+body {
+  background-image: url("../images/bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.wrapper {
+  width: 600px;
+  padding: 20px;
+    display: flex;
+  flex-direction: column;
+}
+
+.wrapper h2 {
+  text-align: center
+}
+
+.wrapper form .form-group span {
+  color: #F94A29;
+  opacity: 35%;
+}
+
+
+.form-row{
+    margin-top: 1.5em
+
+
+
+}
+.form-row label{
+  margin-top: 6px;
+
+
+
+}
+.form-row label,
+.form-row input {
+  font-family: 'Anton';
+  font-size: 20px;
+
+}
+
+label {
+  display: inline-block;
+  vertical-align: middle;
+  align-items:flex-start;
+}
+
+input[type="text"], input[type="password"] {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.form-group{
+  align-items: center;
+}
+
+.register-link {
+  color: #E6EC36;
+}
+
+.register-link:hover {
+  color: #F94A29;
+}
+.question {
+  color: white;
+}
+
+.label-col {
+  text-align: left;
+}
+
+.input-col {
+  text-align: right;
+}
+
+
+/* ========================================================================================================= */
+/* Main Menu  */
+
+
+#header {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#menu-buttons button {
+  background-color: rgba(255, 0, 0, 0.5);
+  color: yellow;
+  border-radius: 30px;
+  border: none;
+  font-family: "All the Way to the Sun";
+  margin: 10px;
+  transition: background-color 0.5s ease;
+  font-size: 2em;
+  padding: 20px;
+  ;
+
+  top: calc(40%);
+  left: 50%;
+}
+
+#menu-buttons button:hover {
+  background-color: #d45a5f;
+}
+
+#music-switch-container {
+
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  display: flex;
+  align-items: center;
+
+}
+
+#music-switch-container label {
+  font-family: "DEBUG FREE TRIAL", sans-serif;
+  color: #FFD700;
+  font-size: 2em;
+  margin-right: 10px;
+}
+
+#music-switch {
+  appearance: none;
+  width: 50px;
+  height: 25px;
+  border-radius: 15px;
+  background-color: #d45a5f;
+  position: relative;
+  cursor: pointer;
+}
+
+#music-switch:checked {
+  background-color: #5fd45a;
+}
+
+#music-switch::before {
+  content: '';
+  position: absolute;
+  top: 2.5px;
+  left: 2.5px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #fff;
+  transition: all 0.2s ease-in-out;
+}
+
+#music-switch:checked::before {
+  transform: translateX(25px);
+}
